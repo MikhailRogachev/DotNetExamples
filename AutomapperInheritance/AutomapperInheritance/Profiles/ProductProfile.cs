@@ -11,11 +11,8 @@ namespace AutomapperInheritance.Profiles
         public ProductProfile()
         {
             CreateMap<InputProduct, defProduct.Product>()
-                .ForMember(d => d.Id, s => s.MapFrom(r => r.Id))
-                .ForMember(d => d.Name, s => s.MapFrom(r => r.Name))
                 .ForMember(d => d.IsActive, s => s.MapFrom(r => r.IsActive))
                 .ForMember(d => d.IsDeleted, s => s.MapFrom(r => !r.IsActive))
-                .ForMember(d => d.Description, s => s.MapFrom(r => r.Description))
                 .ForMember(d => d.Notes, s => s.MapFrom(r => GetMainNotes(r)));
 
             CreateMap<InputProduct, inProduct.Product>()

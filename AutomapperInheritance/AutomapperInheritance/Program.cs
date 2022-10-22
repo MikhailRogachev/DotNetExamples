@@ -14,8 +14,4 @@ foreach(var product in _products)
     Console.WriteLine("Product Type = {0}", item.GetType());
 }
 
-
-
-
-
-
+Console.ReadKey();
