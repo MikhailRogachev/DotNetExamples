@@ -11,7 +11,7 @@ namespace AutomapperInheritance.Data
             ProductSeed(context);
         }
 
-        private static void ProductSeed(OrderContext context)
+        private static void ProductSeed(OrderContext context) 
         {
             if(!context.Product.Any())
             {
