@@ -8,5 +8,8 @@
         public string ShortName { get; set; }
         public string FullName { get; set; }
         public string Manufacturer { get; set; }
+
+        public string LineId { get; set; }
+        public OrderLineDto Line { get; set; }
     }
 }
