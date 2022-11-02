@@ -1,12 +1,21 @@
-﻿namespace AutomapperLab.Models.OrderModels;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AutomapperLab.Models.OrderModels;
 public class OrderModel
 {
-    public string Id { get; set; }
+    [Key]
+    public int Id { get; set; }
     public string OrderNumber { get; set; }
+    public string OrderType { get; set; }
     public string CurrentStatus { get; set; }
     public string ResellerId { get; set; }
-    public string CreatedDateTime { get; set; }
-    public string LastUpdatedDateTime { get; set; }
+    public DateTime CreatedDateTime { get; set; }
+    public DateTime LastUpdatedDateTime { get; set; }
+
+    // novigation properties
+    [ForeignKey("Customer")]
+    public int CustomerId { get; set; }
     public CustomerModel Customer { get; set; }
-    public IReadOnlyCollection<OrderLineModel> Lines { get; set; }
+    public ICollection<OrderLineModel> Lines { get; set; }
 }

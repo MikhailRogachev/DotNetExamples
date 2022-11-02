@@ -4,11 +4,11 @@ namespace AutomapperLab.Models.OrderModels;
 public class DealModel
 {
     [Key]
-    public string DealId { get; set; }
-    public string StartDate { get; set; }
-    public string EndDate { get; set; }
+    public int DealId { get; set; }
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
     public decimal Percent { get; set; }
-
-    public string LineId { get; set; }
-    public OrderLineModel Line { get; set; }
+    
+    // novigation properties
+    public ICollection<OrderLineModel> Line { get; set; }
 }

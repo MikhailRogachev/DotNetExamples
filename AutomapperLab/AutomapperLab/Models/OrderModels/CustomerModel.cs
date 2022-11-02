@@ -1,12 +1,17 @@
-﻿namespace AutomapperLab.Models.OrderModels;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AutomapperLab.Models.OrderModels;
 public class CustomerModel
 {
-    public string Id { get; set; }
+    [Key]
+    public int Id { get; set; }
     public string CustomerId { get; set; }
     public string CustomerName { get; set; }
-    public AddressModel AddressDelivery { get; set; }
-    public IReadOnlyCollection<ContactModel> Contacts { get; set; }
 
-    public string OrderId { get; set; }
-    public OrderModel Order { get; set; }
+    // novigation properties
+    [ForeignKey("Address")]
+    public int AddressId { get; set; }
+    public AddressModel Address { get; set; }
+    public ICollection<ContactModel> Contacts { get; set; }
 }
