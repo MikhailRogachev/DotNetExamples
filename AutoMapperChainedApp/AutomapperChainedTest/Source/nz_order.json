@@ -1,0 +1,34 @@
+{
+	"id" : 1,
+	"orderNumber" : "34-00-NZ-100",
+	"orderType" : "Renewal",
+	"resellerId" : "915012",
+	"customer" : {
+		"customerNumber" : "10512220",
+		"country" : "NZ"
+	},
+	"statusId" : "First Stage",
+	"deliveryDate" : "2022-11-15T13:50:55.364Z",
+	"lines" : [{
+		"id" : 1,
+		"lineNumber" : "0010",
+		"quantity" : 4,
+		"price" : 240.90,
+		"currency" : "NZD",
+		"deal" : {
+			"dealId" : "d-12",
+			"discountPercent" : 10
+		},
+		"products" : [{
+			"sourceType" : "eShop",
+			"productId" : "VSX-0001",
+			"manufacturer" : "VSX",
+			"manufacturerCountry" : "NZ"
+		},{
+			"sourceType" : "SAP68",
+			"productId" : "SAP-VSX-0001",
+			"manufacturer" : "VSX",
+			"manufacturerCountry" : "NZ"
+		}]
+	}]	
+}
