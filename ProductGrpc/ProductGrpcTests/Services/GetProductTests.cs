@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -12,7 +11,7 @@ namespace ProductGrpcTests.Services
     {
 
         [Fact]
-        public async void GetProduct_RetunProduct()
+        public async Task GetProduct_RetunProduct()
         {
             var productId = 1;
             var service = new ProductService(Context, Mapper, new Mock<ILogger<ProductService>>().Object);
